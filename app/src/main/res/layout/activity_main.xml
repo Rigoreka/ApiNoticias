@@ -12,6 +12,7 @@
         android:id="@+id/txtCantidad"
         android:layout_width="212dp"
         android:layout_height="38dp"
+        android:gravity="center"
         android:text="Hello World!"
         android:textColor="@color/black"
         android:textStyle="bold"
