@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_51171591_10217187__1_"
+    android:background="@drawable/_64ca2a0ffa676d1a38ecb22ff627bd4"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtCantidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="212dp"
+        android:layout_height="38dp"
         android:text="Hello World!"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

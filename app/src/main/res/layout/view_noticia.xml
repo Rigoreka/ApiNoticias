@@ -12,7 +12,7 @@
 
 
         android:visibility="visible"
-        app:cardBackgroundColor="@android:color/transparent">
+        app:cardBackgroundColor="@color/white">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/_51171591_10217187"
+            android:background="@color/white"
             android:paddingBottom="5dp">
 
             <TextView
@@ -28,34 +28,33 @@
                 android:layout_width="263dp"
                 android:layout_height="49dp"
                 android:layout_marginStart="1dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="124dp"
                 android:layout_marginEnd="1dp"
-                android:layout_marginBottom="18dp"
+                android:layout_marginBottom="1dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/imgNoti"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.858"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider" />
+                app:layout_constraintTop_toBottomOf="@+id/divider"
+                app:layout_constraintVertical_bias="0.875" />
 
             <ImageView
                 android:id="@+id/imgNoti"
-                android:layout_width="128dp"
-                android:layout_height="84dp"
-                android:layout_marginStart="128dp"
-                android:layout_marginTop="17dp"
-                android:layout_marginEnd="135dp"
-                android:layout_marginBottom="56dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="303dp"
+                android:layout_height="115dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/txtTitle"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.35"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/divider"
                 app:srcCompat="@drawable/ic_launcher_background" />
 
             <View
@@ -63,14 +62,33 @@
                 android:layout_width="369dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="1dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="1dp"
                 android:background="?android:attr/listDivider"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:visibility="invisible" />
+
+            <Button
+                android:id="@+id/Share"
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="7dp"
+                android:background="@android:drawable/ic_menu_share"
+                android:backgroundTint="@color/white"
+                app:iconTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imgNoti"
+                app:layout_constraintTop_toBottomOf="@+id/imgNoti"
+                app:rippleColor="@color/white" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

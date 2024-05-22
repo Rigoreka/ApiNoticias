@@ -1,5 +1,7 @@
 package com.example.apinoticias
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +28,11 @@ class MuestraNoticias : AppCompatActivity() {
         val Titulo=intent.getStringExtra("title")
         val Descrip=intent.getStringExtra("description")
         val img=intent.getStringExtra("image_url")
+        val link =intent.getStringExtra("link")
+
+
+
+
 
         binding.txtTitulo.text=Titulo
         binding.txtDescripcion.text=Descrip
@@ -33,5 +40,19 @@ class MuestraNoticias : AppCompatActivity() {
         Glide.with(this)
             .load(img)
             .into(binding.imgNoticia)
+
+
+        binding.link.setOnClickListener {
+            if (link != null) {
+                Link(link)
+            }
+        }
     }
+
+    private fun Link(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        startActivity(intent)
+    }
+
 }

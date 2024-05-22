@@ -10,5 +10,6 @@ data class ApiResponse(
 data class Article(
     val title: String,
     val description: String,
-    val image_url: String
+    val image_url: String,
+    val link:String
 )

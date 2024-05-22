@@ -46,13 +46,14 @@ class MainActivity : AppCompatActivity() {
                             val data = result.get()
                             val newsResponse = Gson().fromJson(data, ApiResponse::class.java)
                             runOnUiThread {
-                                binding.txtCantidad.text = "Noticias disponibles: ${newsResponse.totalResults}"
+                                binding.txtCantidad.text = "The News API contiene un total de: ${newsResponse.totalResults} Noticias"
 
                                 binding.rclnoticias.adapter = NewsAdapter(newsResponse.results) { news ->
                                     val intent = Intent(this@MainActivity, MuestraNoticias::class.java).apply {
                                         putExtra("title", news.title)
                                         putExtra("description",news.description)
                                         putExtra("image_url", news.image_url)
+                                        putExtra("link",news.link)
                                     }
                                     startActivity(intent)
                                 }

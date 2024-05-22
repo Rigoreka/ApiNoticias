@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_51171591_10217187"
+    android:background="@drawable/_64ca2a0ffa676d1a38ecb22ff627bd4"
     tools:context=".MuestraNoticias">
 
     <TextView
@@ -17,7 +17,7 @@
         android:layout_marginBottom="28dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtDescripcion"
@@ -33,7 +33,8 @@
         android:layout_marginBottom="352dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
+        android:textColorLink="#3454C5"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,8 +43,8 @@
 
     <ImageView
         android:id="@+id/imgNoticia"
-        android:layout_width="285dp"
-        android:layout_height="110dp"
+        android:layout_width="309dp"
+        android:layout_height="142dp"
         android:layout_marginStart="151dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="152dp"
@@ -55,5 +56,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.905"
         app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/link"
+        android:layout_width="203dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="201dp"
+        android:background="@drawable/_26030250_10212747"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="add"
+        android:text="Leer Mas >>"
+        android:textColorLink="#366ABA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,10 @@
 package com.example.apinoticias
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,11 @@ class NewsAdapter (private  val news: List<Article>,private val onItemClick:(Art
     inner class NewsViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
         private val Title = itemView.findViewById<TextView>(R.id.txtTitle)
         private val Img = itemView.findViewById<ImageView>(R.id.imgNoti)
+        private val share=itemView.findViewById<Button>(R.id.Share)
+
+
+
+
 
 
         fun bind(new: Article) {
@@ -27,8 +34,23 @@ class NewsAdapter (private  val news: List<Article>,private val onItemClick:(Art
             // Configurar el clic en el itemView
             itemView.setOnClickListener {
                 onItemClick(new)
+
+            }
+            share.setOnClickListener {
+                ShareArticle(new)
             }
         }
+        private fun ShareArticle (article: Article) {
+
+            val intent = Intent().apply{
+                action=Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT,"Compartir")
+                type="text/plain"
+            }
+            val shareIntent=Intent.createChooser(intent,null)
+            itemView.context.startActivity(shareIntent)
+        }
+
     }
 
 
@@ -46,4 +68,10 @@ class NewsAdapter (private  val news: List<Article>,private val onItemClick:(Art
         val N = news[position]
         holder.bind(N)
     }
+
+
+
+
+
+
 }
